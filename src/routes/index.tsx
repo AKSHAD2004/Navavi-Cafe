@@ -79,7 +79,7 @@ function Home() {
                 ["Cities", "15+"],
                 ["Products", `${PRODUCTS.length}+`],
               ].map(([label, value]) => (
-                <div key={label}>
+                <div key={label} className="transition-transform duration-300 hover:scale-105">
                   <dt className="text-xs uppercase tracking-wider text-espresso-foreground/60">
                     {label}
                   </dt>
@@ -89,14 +89,49 @@ function Home() {
             </dl>
           </div>
 
-          <div className="relative">
+          <div className="relative flex items-center justify-center">
+            {/* Ambient Warm Aura Glow behind hero image */}
+            <div className="hero-warm-glow -inset-6 opacity-70" aria-hidden="true" />
             <img
               src={hero1}
               alt="Navavi Chai & Cafe Hero"
               width={1600}
               height={1104}
-              className="w-full rounded-3xl object-cover shadow-lift"
+              className="animate-hero-float relative z-10 w-full rounded-3xl object-cover shadow-lift transition-transform duration-500 hover:scale-[1.02]"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Infinite Animated Trust & Quality Marquee */}
+      <section className="border-y border-border/70 bg-secondary/80 py-3.5 backdrop-blur-sm">
+        <div className="marquee-container">
+          <div className="marquee-track flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-espresso sm:text-sm">
+            <span>✨ 100% Authentic Desi Taste</span>
+            <span>•</span>
+            <span>☕ 50+ Amrutulya Outlets in India</span>
+            <span>•</span>
+            <span>⚡ Instant Premix &amp; Zero Wastage</span>
+            <span>•</span>
+            <span>🏆 Premium Spices &amp; Tea Leaves</span>
+            <span>•</span>
+            <span>💼 High Margin Franchise Model</span>
+            <span>•</span>
+            <span>🚀 Full Training &amp; Marketing Support</span>
+            <span>•</span>
+            {/* Repeated for seamless infinite scroll */}
+            <span>✨ 100% Authentic Desi Taste</span>
+            <span>•</span>
+            <span>☕ 50+ Amrutulya Outlets in India</span>
+            <span>•</span>
+            <span>⚡ Instant Premix &amp; Zero Wastage</span>
+            <span>•</span>
+            <span>🏆 Premium Spices &amp; Tea Leaves</span>
+            <span>•</span>
+            <span>💼 High Margin Franchise Model</span>
+            <span>•</span>
+            <span>🚀 Full Training &amp; Marketing Support</span>
+            <span>•</span>
           </div>
         </div>
       </section>
@@ -107,10 +142,12 @@ function Home() {
           {highlights.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-warm"
+              className="card-glow-hover group rounded-2xl border border-border bg-card p-6 shadow-sm"
             >
-              <Icon className="size-7 text-primary" />
-              <h3 className="mt-4 text-lg">{title}</h3>
+              <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+                <Icon className="icon-hover-bounce size-6 text-primary" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </div>
           ))}

@@ -64,14 +64,17 @@ function Franchise() {
               </a>
             </div>
           </div>
-          <img
-            src={heroChai}
-            alt="Amrutulya style chai served in kulhad cups"
-            loading="lazy"
-            width={1600}
-            height={1104}
-            className="w-full rounded-3xl object-cover shadow-lift"
-          />
+          <div className="relative flex items-center justify-center">
+            <div className="hero-warm-glow -inset-6 opacity-70" aria-hidden="true" />
+            <img
+              src={heroChai}
+              alt="Amrutulya style chai served in kulhad cups"
+              loading="lazy"
+              width={1600}
+              height={1104}
+              className="animate-hero-float relative z-10 w-full rounded-3xl object-cover shadow-lift transition-transform duration-500 hover:scale-[1.02]"
+            />
+          </div>
         </div>
       </section>
 
