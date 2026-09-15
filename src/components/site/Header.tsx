@@ -99,6 +99,39 @@ export function Header() {
           </nav>
         </div>
       ) : null}
+
+      {/* Infinite Animated Trust & Quality Marquee Line below Navbar */}
+      <div className="border-t border-border/60 bg-secondary/85 py-1.5 backdrop-blur-sm">
+        <div className="marquee-container">
+          <div className="marquee-track flex items-center gap-6 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-espresso">
+            <span>✨ 100% Authentic Desi Taste</span>
+            <span>•</span>
+            <span>☕ 50+ Amrutulya Outlets in India</span>
+            <span>•</span>
+            <span>⚡ Instant Premix &amp; Zero Wastage</span>
+            <span>•</span>
+            <span>🏆 Premium Spices &amp; Tea Leaves</span>
+            <span>•</span>
+            <span>💼 High Margin Franchise Model</span>
+            <span>•</span>
+            <span>🚀 Full Training &amp; Marketing Support</span>
+            <span>•</span>
+            {/* Repeated for seamless infinite scroll */}
+            <span>✨ 100% Authentic Desi Taste</span>
+            <span>•</span>
+            <span>☕ 50+ Amrutulya Outlets in India</span>
+            <span>•</span>
+            <span>⚡ Instant Premix &amp; Zero Wastage</span>
+            <span>•</span>
+            <span>🏆 Premium Spices &amp; Tea Leaves</span>
+            <span>•</span>
+            <span>💼 High Margin Franchise Model</span>
+            <span>•</span>
+            <span>🚀 Full Training &amp; Marketing Support</span>
+            <span>•</span>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
