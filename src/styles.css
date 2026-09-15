@@ -1,0 +1,341 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Navavi Chai & Cafe design system.
+ * Warm, premium, desi: deep coffee brown, gold/amber, cream.
+ * All colors in oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-espresso: var(--espresso);
+  --color-espresso-foreground: var(--espresso-foreground);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-tea: var(--tea);
+  --color-coffee: var(--coffee);
+  --color-lemon: var(--lemon);
+  --color-premix: var(--premix);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.975 0.014 85);
+  --foreground: oklch(0.25 0.045 55);
+  --card: oklch(0.995 0.008 90);
+  --card-foreground: oklch(0.25 0.045 55);
+  --popover: oklch(0.995 0.008 90);
+  --popover-foreground: oklch(0.25 0.045 55);
+
+  --primary: oklch(0.74 0.145 78);
+  --primary-foreground: oklch(0.22 0.05 50);
+  --secondary: oklch(0.94 0.022 82);
+  --secondary-foreground: oklch(0.28 0.05 52);
+  --muted: oklch(0.94 0.018 84);
+  --muted-foreground: oklch(0.48 0.035 60);
+  --accent: oklch(0.92 0.045 80);
+  --accent-foreground: oklch(0.26 0.05 50);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0.005 90);
+
+  --border: oklch(0.88 0.025 78);
+  --input: oklch(0.88 0.025 78);
+  --ring: oklch(0.74 0.145 78);
+
+  --espresso: oklch(0.24 0.045 48);
+  --espresso-foreground: oklch(0.96 0.018 85);
+  --cream: oklch(0.96 0.02 86);
+  --gold: oklch(0.78 0.15 80);
+  --gold-soft: oklch(0.88 0.09 84);
+
+  --tea: oklch(0.62 0.13 145);
+  --coffee: oklch(0.45 0.09 55);
+  --lemon: oklch(0.8 0.15 95);
+  --premix: oklch(0.6 0.16 25);
+
+  --whatsapp: oklch(0.68 0.16 150);
+  --whatsapp-foreground: oklch(0.99 0.005 150);
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.2 0.04 46) 0%,
+    oklch(0.3 0.06 52) 55%,
+    oklch(0.38 0.08 58) 100%
+  );
+  --gradient-gold: linear-gradient(120deg, oklch(0.83 0.13 88), oklch(0.72 0.16 70));
+  --shadow-warm: 0 18px 40px -22px oklch(0.3 0.08 50 / 0.55);
+  --shadow-lift: 0 26px 60px -28px oklch(0.28 0.09 48 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+}
+
+@utility surface-dark {
+  background-image: var(--gradient-hero);
+  color: var(--espresso-foreground);
+}
+
+@utility text-gradient-gold {
+  background-image: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility shadow-warm {
+  box-shadow: var(--shadow-warm);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 3.5rem;
+  @media (min-width: 768px) {
+    padding-block: 5.5rem;
+  }
+}
+
+/* 3D Perspective & Continuous Z-Axis Pop Animation */
+.perspective-container {
+  perspective: 1000px;
+}
+
+@keyframes z-axis-pop {
+  0%, 100% {
+    transform: translateZ(0px) scale(1);
+    box-shadow: 0 10px 25px -12px oklch(0.3 0.08 50 / 0.4);
+  }
+  50% {
+    transform: translateZ(28px) scale(1.05);
+    box-shadow: 0 24px 45px -12px oklch(0.28 0.09 48 / 0.65), 0 0 20px 2px oklch(0.74 0.145 78 / 0.35);
+  }
+}
+
+.animate-z-pop {
+  transform-style: preserve-3d;
+  animation: z-axis-pop 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, box-shadow;
+}
+
+.animate-z-pop:hover {
+  animation-play-state: paused;
+  transform: translateZ(16px) scale(1.04);
+  box-shadow: 0 20px 35px -10px oklch(0.28 0.09 48 / 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-z-pop {
+    animation: none;
+  }
+}
+
+/* Floating WhatsApp 3D Pop Animation */
+.whatsapp-floating-container {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 50;
+  perspective: 1000px;
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-floating-container {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+@keyframes whatsapp-z-pop {
+  0%, 100% {
+    transform: translateZ(0px) scale(1);
+    box-shadow: 0 10px 25px -8px oklch(0.35 0.12 150 / 0.45);
+  }
+  50% {
+    transform: translateZ(28px) scale(1.06);
+    box-shadow: 0 24px 45px -10px oklch(0.3 0.14 150 / 0.65), 0 0 24px 3px oklch(0.68 0.16 150 / 0.45);
+  }
+}
+
+.animate-whatsapp-z-pop {
+  transform-style: preserve-3d;
+  animation: whatsapp-z-pop 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, box-shadow;
+}
+
+.animate-whatsapp-z-pop:hover {
+  animation-play-state: paused;
+  transform: translateZ(18px) scale(1.05);
+  box-shadow: 0 20px 35px -8px oklch(0.3 0.14 150 / 0.6), 0 0 18px 2px oklch(0.68 0.16 150 / 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-whatsapp-z-pop {
+    animation: none;
+  }
+}
+
+/* Product Card Scroll-Triggered Reveal & Stagger */
+.product-card-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+  transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.product-card-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tactile Active Tap Feedback (Replaces Hover-zoom for mobile & touch) */
+.product-card-interactive {
+  transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s ease;
+  touch-action: manipulation;
+}
+
+.product-card-interactive:active {
+  transform: scale(0.975);
+}
+
+/* Image Shimmer Loading Skeleton */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.image-shimmer {
+  background: linear-gradient(
+    90deg,
+    oklch(0.93 0.02 82) 0%,
+    oklch(0.97 0.015 86) 50%,
+    oklch(0.93 0.02 82) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .product-card-interactive:active {
+    transform: none !important;
+  }
+  .image-shimmer {
+    animation: none !important;
+  }
+  .product-image-container {
+    transition: none !important;
+    transform: none !important;
+  }
+  .product-image-container.mobile-focus-pop {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Mobile-Only Center-Focus Scroll Pop for Product Card Image */
+.product-image-container {
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.45s ease;
+  will-change: transform, box-shadow;
+}
+
+@media (max-width: 768px) {
+  .product-image-container.mobile-focus-pop {
+    transform: scale(1.05);
+    box-shadow: 0 10px 22px -8px oklch(0.28 0.09 48 / 0.16), 0 0 12px 1px oklch(0.74 0.145 78 / 0.12);
+    border-color: oklch(0.74 0.145 78 / 0.4);
+  }
+}
+
+@media (min-width: 769px) {
+  .product-image-container.mobile-focus-pop {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+
+
