@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo/logo.png";
-import { NAV, PHONE, PHONE_DISPLAY, whatsappLink, BRAND } from "@/data/site";
+import { NAV, PHONE, PHONE_DISPLAY, BRAND } from "@/data/site";
 import { FranchiseCTAButton } from "./FranchiseCTAButton";
-import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -47,16 +46,6 @@ export function Header() {
           >
             <Phone className="size-4" />
             {PHONE_DISPLAY}
-          </a>
-          <a
-            href={whatsappLink("Hi Navavi Chai & Cafe, I have an enquiry.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-whatsapp px-3 py-2 text-sm font-semibold text-whatsapp-foreground transition-all hover:brightness-105"
-          >
-            <WhatsAppIcon className="size-4" />
-            <span className="hidden xl:inline">WhatsApp</span>
           </a>
           <FranchiseCTAButton label="Franchise Enquiry" size="sm" className="hidden sm:inline-flex" animated />
           <button
