@@ -44,14 +44,16 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-espresso-foreground/80">
             <li className="flex items-center gap-2">
               <Phone className="size-4 shrink-0 text-primary" />
-              <a href={`tel:+91${PHONE}`} className="hover:text-primary">
+              <a href={`tel:+91${PHONE}`} className="hover:text-primary transition-colors">
                 {PHONE_DISPLAY}
               </a>
             </li>
-            {/* <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2">
               <Mail className="size-4 shrink-0 text-primary" />
-              <span>{BRAND.email}</span>
-            </li> */}
+              <a href={`mailto:${BRAND.email}`} className="hover:text-primary transition-colors">
+                {BRAND.email}
+              </a>
+            </li>
             <li className="flex gap-2">
               <MapPin className="size-4 shrink-0 text-primary" />
               <span>Head Office: {BRAND.puneAddress}</span>

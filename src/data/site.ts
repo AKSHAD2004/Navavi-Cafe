@@ -6,11 +6,13 @@ export function whatsappLink(message: string) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 }
 
+export const EMAIL = "navavicafe@gmail.com";
+
 export const BRAND = {
   name: "Navavi Chai & Cafe",
   tagline: "Shahi Swad Har Dil Ke Pass",
   franchise: "Amrutulya",
-  email: "[ADD: official email address]",
+  email: "navavicafe@gmail.com",
   puneAddress: "Somaji Complex, Flat No. 6, Opposite to Vama, Indira Gandhi Chowk, Akurdi – 411035, Pune",
   bijnorAddress: "Near Dak Khana, Pani Ki Tanki Ke Paas, Bijnor – 246701",
   hours: "[ADD: business hours]",
