@@ -88,7 +88,7 @@ export function ProductCard({
             src={product.image}
             alt={product.name}
             loading="lazy"
-            className="relative z-10 size-full object-contain transition-transform duration-300 group-hover:scale-105"
+            className="relative z-10 size-full object-contain transition-transform duration-500 group-hover:scale-108 group-hover:-translate-y-1 animate-card-product-float"
           />
         ) : (
           <div className="flex flex-col items-center justify-center text-center p-4">

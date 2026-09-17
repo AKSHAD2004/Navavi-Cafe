@@ -414,6 +414,10 @@
   box-shadow: 0 16px 36px -12px oklch(0.3 0.08 50 / 0.18), 0 0 20px 2px oklch(0.74 0.145 78 / 0.15);
 }
 
+.card-glow-hover:active {
+  transform: scale(0.98);
+}
+
 /* 4. Icon Bounce & Spin on Hover */
 .icon-hover-bounce {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -473,5 +477,98 @@
     transform: translateX(100%);
   }
 }
+
+/* 7. Product & Universal Card Animations (Mobile & All Devices) */
+.product-card-reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  will-change: opacity, transform;
+}
+
+.product-card-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.product-card-interactive {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease;
+}
+
+.product-card-interactive:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: oklch(0.74 0.145 78 / 0.6);
+  box-shadow: 0 20px 40px -14px oklch(0.3 0.08 50 / 0.22), 0 0 22px 2px oklch(0.74 0.145 78 / 0.15);
+}
+
+.product-card-interactive:active {
+  transform: scale(0.98);
+}
+
+/* Subtle floating packaging animation */
+@keyframes product-packaging-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+
+.animate-card-product-float {
+  animation: product-packaging-float 3.8s ease-in-out infinite;
+}
+
+/* Mobile Center-Focus & Ambient Card Pop */
+.mobile-focus-pop {
+  border-color: oklch(0.74 0.145 78 / 0.75) !important;
+  box-shadow: 0 14px 32px -10px oklch(0.3 0.08 50 / 0.25), 0 0 20px 3px oklch(0.74 0.145 78 / 0.2) !important;
+  transform: scale(1.02);
+}
+
+.mobile-focus-pop img {
+  animation: product-packaging-float 3s ease-in-out infinite;
+}
+
+/* Image container shimmer reflection */
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: left 0.75s ease;
+}
+
+.group:hover .product-image-container::after {
+  left: 200%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-card-product-float,
+  .mobile-focus-pop img {
+    animation: none !important;
+  }
+}
+
 
 
