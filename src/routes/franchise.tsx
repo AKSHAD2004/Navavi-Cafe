@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgeCheck, GraduationCap, Megaphone, PackageCheck, Phone, Wallet } from "lucide-react";
-import heroChai from "@/assets/hero/hero1.jpeg";
+import heroChai from "@/assets/hero/hero1 (2).jpeg";
 import { StepCard } from "@/components/site/StepCard";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { FranchiseCTAButton } from "@/components/site/FranchiseCTAButton";

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Leaf, Store, Truck, IndianRupee, Phone, Star } from "lucide-react";
-import hero1 from "@/assets/hero/hero1.jpeg";
+import hero1 from "@/assets/hero/hero1 (2).jpeg";
 import { FranchiseCTAButton } from "@/components/site/FranchiseCTAButton";
 import { HomeProductsSection } from "@/components/site/HomeProductsSection";
 import { StepCard } from "@/components/site/StepCard";
@@ -54,8 +54,8 @@ function Home() {
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <Star className="size-3.5" /> Amrutulya Chai Franchise
             </span>
-            <h1 className="mt-5 font-display text-4xl leading-tight text-espresso-foreground md:text-5xl lg:text-6xl">
-              Apni <span className="text-gradient-gold">Amrutulya Chai</span> franchise shuru kijiye
+            <h1 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-espresso-foreground">
+              Apni <span className="text-gradient-gold inline-block whitespace-nowrap">NAVAVI Chai &amp; Cafe</span> Franchise abhi shuru kijiye
             </h1>
             <p className="mt-3 font-display text-lg text-primary">Shahi Swad Har Dil Ke Pass</p>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-espresso-foreground/80">

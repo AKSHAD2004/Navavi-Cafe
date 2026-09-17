@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloatButton } from "@/components/site/WhatsAppFloatButton";
+import { InitialPreloader } from "@/components/site/InitialPreloader";
 
 function NotFoundComponent() {
   return (
@@ -126,6 +127,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <InitialPreloader />
       <div className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">

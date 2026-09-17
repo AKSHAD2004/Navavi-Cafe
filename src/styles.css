@@ -451,3 +451,27 @@
   animation: btn-shimmer-sweep 3.5s infinite;
   pointer-events: none;
 }
+
+/* 6. Preloader Animations */
+@keyframes preloader-fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loader-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
