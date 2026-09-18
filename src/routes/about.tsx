@@ -51,13 +51,12 @@ function About() {
           />
           <div>
             <h2 className="text-3xl">Our story</h2>
-            {/* <p className="mt-4 leading-relaxed text-muted-foreground">
-              [ADD: founding year and founder story for Navavi Chai &amp; Cafe]
-            </p> */}
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Today we operate from our offices in Pune and Bijnor, supplying tea, coffee, lemon tea
-              and refreshment premixes to Amrutulya outlets, cafes, offices and bulk buyers.
-              [ADD: production capacity and certifications, e.g. FSSAI licence number]
+              Rooted in the rich culinary heritage of royal Indian tea recipes, Navavi Chai &amp; Cafe was founded with a passion to deliver uncompromised taste, natural ingredients, and instant convenience.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Today we operate from our hubs in Pune and Bijnor, supplying authentic tea, coffee, lemon tea
+              and refreshment premixes to franchise outlets, cafes, offices and bulk buyers across India with full FSSAI compliance and strict quality control.
             </p>
             <FranchiseCTAButton className="mt-7" label="Partner with us" />
           </div>

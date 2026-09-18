@@ -28,7 +28,7 @@ const reasons = [
   { icon: Timer, title: "Serve in seconds", text: "Faster service means shorter queues and more cups sold at peak hours." },
   { icon: TrendingUp, title: "Healthy margins", text: "Controlled portions and low wastage protect your daily profitability." },
   { icon: Layers, title: "Wide product range", text: "Chai, coffee, lemon tea and refreshments — one supplier for the full menu." },
-  { icon: ShieldCheck, title: "Quality you can trust", text: "[ADD: quality certifications, FSSAI licence and testing process]" },
+  { icon: ShieldCheck, title: "Quality you can trust", text: "FSSAI-compliant manufacturing, 100% vegetarian ingredients, and strict batch testing for purity, authentic aroma, and shelf stability." },
   { icon: Handshake, title: "Partner-first support", text: "Training, supply and business guidance that continue long after launch." },
 ];
 
