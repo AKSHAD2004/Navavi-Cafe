@@ -127,9 +127,10 @@ export function EnquiryForm({
             <span className="mb-1.5 block text-sm font-medium">Investment capacity</span>
             <select name="investment" defaultValue="" className={inputClass}>
               <option value="">Select a range</option>
-              <option>[ADD: investment range 1]</option>
-              <option>[ADD: investment range 2]</option>
-              <option>[ADD: investment range 3]</option>
+              <option>₹3 Lakh – ₹5 Lakh (Kiosk Model)</option>
+              <option>₹5 Lakh – ₹8 Lakh (Standard Cafe)</option>
+              <option>₹8 Lakh – ₹12 Lakh (Flagship Cafe)</option>
+              <option>Above ₹12 Lakh (Multi-Unit)</option>
               <option>Not sure yet</option>
             </select>
           </label>

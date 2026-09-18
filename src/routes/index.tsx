@@ -133,9 +133,9 @@ function Home() {
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <StepCard step={1} title="Enquire" description="Fill the franchise form or call us. We understand your city, budget and space." />
-            <StepCard step={2} title="Discussion" description="Our team shares the model, [ADD: investment details] and expected returns." />
+            <StepCard step={2} title="Discussion" description="Our team shares the business model, investment breakdown and expected returns." />
             <StepCard step={3} title="Setup" description="Location finalisation, outlet setup and staff training with our support team." />
-            <StepCard step={4} title="Launch" description="Your Amrutulya outlet opens with supply, branding and ongoing guidance." />
+            <StepCard step={4} title="Launch" description="Your Navavi Chai & Cafe outlet opens with supply, branding and ongoing guidance." />
           </div>
         </div>
       </section>

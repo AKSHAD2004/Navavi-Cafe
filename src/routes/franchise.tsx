@@ -10,13 +10,13 @@ import { PHONE, PHONE_DISPLAY, whatsappLink } from "@/data/site";
 export const Route = createFileRoute("/franchise")({
   head: () => ({
     meta: [
-      { title: "Amrutulya Chai Franchise — Navavi Chai & Cafe" },
+      { title: "Navavi Chai & Cafe Franchise — Amrutulya Chai Model" },
       {
         name: "description",
         content:
-          "Own an Amrutulya chai franchise with Navavi Chai & Cafe. Compact outlet model, premix supply, training and marketing support. Enquire now.",
+          "Own a Navavi Chai & Cafe franchise. Compact outlet model, premix supply, training and marketing support. Enquire now.",
       },
-      { property: "og:title", content: "Amrutulya Chai Franchise Opportunity" },
+      { property: "og:title", content: "Navavi Chai & Cafe Franchise Opportunity" },
       {
         property: "og:description",
         content:
@@ -45,10 +45,10 @@ function Franchise() {
         <div className="container-page grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2">
           <div>
             <h1 className="font-display text-4xl text-espresso-foreground md:text-5xl">
-              Amrutulya Chai Franchise
+              Navavi Chai &amp; Cafe Franchise
             </h1>
             <p className="mt-4 max-w-xl leading-relaxed text-espresso-foreground/80">
-              Bring the Navavi Amrutulya chai experience to your city. A compact, premix-driven
+              Bring the Navavi Chai &amp; Cafe experience to your city. A compact, premix-driven
               outlet model designed for fast service, low wastage and a taste customers return for.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -83,19 +83,19 @@ function Franchise() {
           <h2 className="text-3xl md:text-4xl">Franchise model at a glance</h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Investment", "[ADD: total investment range]"],
-              ["Space required", "[ADD: sq. ft. requirement]"],
-              ["Franchise fee", "[ADD: franchise fee]"],
-              ["Expected ROI", "[ADD: ROI / payback period]"],
+              ["Investment", "₹3.5L – ₹6.5L"],
+              ["Space required", "100 – 250 Sq. Ft."],
+              ["Franchise fee", "Zero Royalty Model"],
+              ["Expected ROI", "6 – 9 Months (35-45% Margin)"],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-2xl border border-border bg-card p-6">
+              <div key={label} className="card-glow-hover rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">{label}</p>
-                <p className="mt-2 font-display text-xl text-espresso">{value}</p>
+                <p className="mt-2 font-display text-xl font-bold text-espresso">{value}</p>
               </div>
             ))}
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            Exact figures are shared by our franchise team on your enquiry call.
+            Complete cost breakdown, machinery specifications, and custom layout plans are shared by our franchise team on your enquiry call.
           </p>
         </div>
       </section>
@@ -123,8 +123,8 @@ function Franchise() {
           <h2 className="text-3xl md:text-4xl">Your journey to opening day</h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             <StepCard step={1} title="Submit enquiry" description="Share your name, city and budget through the form below." />
-            <StepCard step={2} title="Discovery call" description="We discuss the model, [ADD: investment details] and your location." />
-            <StepCard step={3} title="Agreement" description="Franchise terms are finalised. [ADD: agreement tenure]" />
+            <StepCard step={2} title="Discovery call" description="We discuss the business model, investment breakdown and location suitability." />
+            <StepCard step={3} title="Agreement" description="Franchise terms and renewable agreement are finalised." />
             <StepCard step={4} title="Setup & training" description="Outlet fit-out, equipment, menu and staff training." />
             <StepCard step={5} title="Grand opening" description="Launch support, supply and ongoing business guidance." />
           </div>

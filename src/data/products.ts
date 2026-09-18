@@ -9,6 +9,7 @@ import blackTea from "@/assets/New Products/10.jpeg";
 import lemonTea from "@/assets/New Products/11.jpeg";
 import hotCoffee from "@/assets/New Products/13.jpg";
 import coldCoffee from "@/assets/New Products/14.jpg";
+import panMasalaTea from "@/assets/New Products/pan-masala-tea.jpg";
 
 export type Product = {
   slug: string;
@@ -22,6 +23,17 @@ export type Product = {
 };
 
 export const PRODUCTS: Product[] = [
+  {
+    slug: "pan-masala-tea",
+    name: "Pan Masala Tea",
+    category: "Tea",
+    description:
+      "Aromatic and refreshing tea infused with the royal flavours of traditional meetha pan, rich spices, fennel and fragrant rose petals.",
+    packSizes: ["100g", "250g", "500g", "1kg", "2kg"],
+    preparation: "Just add hot water — instant serve with authentic taste",
+    tags: ["Aromatic", "Refreshing", "Royal flavour", "Signature blend"],
+    image: panMasalaTea,
+  },
   {
     slug: "basaundi-chai",
     name: "Basaundi Chai Premix",
